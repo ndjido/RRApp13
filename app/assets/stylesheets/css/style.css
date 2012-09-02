@@ -1,0 +1,47 @@
+/* 
+    Document   : style
+    Created on : 29 juil. 2012, 18:49:39
+    Author     : Administrateur
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+		RESET
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+ }
+	
+
+a{
+    outline: none;
+	text-decoration:none;
+ }
+a img{border:none;}
+
+img{
+	vertical-align: middle;
+	}
+	
+table{border-collapse: collapse;}
+
+
+/*
+		CONTENT
+*/
+
+      
+#container{
+          margin: 60px auto;
+          padding: 0px auto;
+          width: 1100px;
+          } 
+
+footer{
+         margin: 5px auto;
+         padding: 0px auto;
+         width: 1100px;
+      }

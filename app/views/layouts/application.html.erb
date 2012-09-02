@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  
+<%= render 'layouts/header' %>
+  
+<!-- BeginBody -->
+<body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Chambre des m&eacute;tiers de Saint Louis</a>
+          
+          <!-- Login info + menu -->
+          <div class="btn-group pull-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-user"></i> Username
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </div>
+          <!-- EOF Login info + menu -->
+          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><%= link_to 'Accueil', root_path %></li>
+              <li class="active"><%= link_to 'Qui sommes nous?', whoweare_path %></li>
+              <li><%= link_to 'Contact', contact_path %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>  
+
+<!-- main container -->
+<div id="container">
+    
+            <%= yield %>
+
+</div>    
+<!-- EOF main container -->
+
+<%= render 'layouts/footer' %>
