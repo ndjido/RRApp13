@@ -21,6 +21,10 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
+gem 'gravatar_image_tag'
+
+gem 'sorcery'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

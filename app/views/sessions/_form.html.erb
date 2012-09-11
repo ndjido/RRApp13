@@ -1,0 +1,5 @@
+<%= simple_form_for :session, url: sessions_path, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :email, :label => "Em@il:", :placeholder => "ndjido", :wrapper_html => { :class => 'control-group' }%>
+    <%= f.input :password, :label => "Password:", :placeholder => "...............", :wrapper_html => { :class => 'control-group' } %>
+    <%= f.button :submit ,'Connexion', :class => 'btn btn-primary' %>
+<% end %>

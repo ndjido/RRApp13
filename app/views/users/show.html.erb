@@ -1,13 +1,15 @@
-<p id="notice"><%= notice %></p>
+
+<p>
+  <%= gravatar_image_tag @user.email %>
+</p>
 
 <p>
   <b>Name:</b>
-  <%= @user.name %>
+  <%= @user.email %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%= @user.email %>
 </p>
 
 

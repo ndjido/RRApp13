@@ -16,17 +16,24 @@
           <a class="brand" href="#">Chambre des m&eacute;tiers de Saint Louis</a>
           
           <!-- Login info + menu -->
+          
           <div class="btn-group pull-right">
+            <% if current_user %>
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> Username
+              <i class="icon-user"></i> <%= current_user.email %>
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li><a href="#">Profile</a></li>
               <li class="divider"></li>
-              <li><a href="#">Sign Out</a></li>
+              <li><a href="<%= logout_path %>">Sign Out</a></li>
             </ul>
+          <% else  %>
+            <%= link_to 'Connexion',login_path, :class => "btn"  %>
+           
+          <% end %>  
           </div>
+          
           <!-- EOF Login info + menu -->
           
           <div class="nav-collapse">
@@ -42,6 +49,9 @@
 
 <!-- main container -->
 <div id="container">
+  <% flash.each do  |name, msg|  %>
+    <%= content_tag :div , msg, :id => "flash_#{name}", :class => "#{flash_class name}"%>
+  <% end %>
     
             <%= yield %>
 

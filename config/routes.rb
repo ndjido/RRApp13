@@ -1,5 +1,12 @@
 RRApp13::Application.routes.draw do
   
+
+  match '/login'  => 'sessions#new'
+  
+  match '/auth'  => 'sessions#create'
+  
+  match '/logout'  => 'sessions#destroy'
+  
   match '/contact'  => 'pages#contact'
   
   match '/whoweare' => 'pages#whoweare'
@@ -11,8 +18,11 @@ RRApp13::Application.routes.draw do
   get "pages/contact"
 
   get "pages/whoweare"
+  
 
   resources :users
+  
+  resources :sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
